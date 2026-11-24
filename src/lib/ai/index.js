@@ -5,7 +5,7 @@ import { createMockProvider, getLastMockCall, resetMock, setMockBehavior } from 
 const OPENAI_BASE_URL = 'https://api.openai.com/v1';
 const OLLAMA_BASE_URL = 'http://127.0.0.1:11434/v1';
 const OPENAI_MODEL = 'gpt-4o-mini';
-const GEMINI_MODEL = 'gemini-2.0-flash';
+const GEMINI_MODEL = 'gemini-3.5-flash-lite';
 const OLLAMA_MODEL = 'llama3.2';
 
 export function createProvider(name, env = process.env) {

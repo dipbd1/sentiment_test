@@ -1,6 +1,6 @@
 const GEMINI_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models';
 
-export function createGeminiProvider({ apiKey = '', model = 'gemini-2.0-flash' } = {}) {
+export function createGeminiProvider({ apiKey = '', model = 'gemini-3.5-flash-lite' } = {}) {
   return {
     async complete({ system, messages, signal }) {
       const url = `${GEMINI_ENDPOINT}/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`;
