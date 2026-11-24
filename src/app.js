@@ -9,6 +9,7 @@ import { errorHandler } from './middleware/errorHandler.js';
 import adminRoutes from './routes/admin.js';
 import authRoutes from './routes/auth.js';
 import postRoutes from './routes/posts.js';
+import supportRoutes from './routes/support.js';
 
 const authRequestLimit = process.env.NODE_ENV === 'test' ? 10000 : 10;
 
@@ -41,6 +42,7 @@ app.use('/api/auth', authLimiter);
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/support', supportRoutes);
 
 app.use((req, res, next) => {
   next(new HttpError(404, 'NOT_FOUND', 'Not found'));
